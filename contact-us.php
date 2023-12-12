@@ -101,9 +101,32 @@ $error="You messed up somewhere buddy! ";
         background-color: #ddffdd;
         border-color: #5cb85c;
     }
+    .back-to-home {
+        text-align: center; /* Center the button container */
+        margin-top: 20px; /* Add some margin at the top */
+    }
+    .btn {
+        padding: 10px 20px; /* Padding inside the button */
+        color: #fff; /* Text color */
+        background-color: #007bff; /* Background color */
+        border: none; /* No border */
+        border-radius: 5px; /* Rounded corners */
+        text-decoration: none; /* Remove underline from the text */
+        font-size: 16px; /* Set font size */
+        transition: background-color 0.3s; /* Smooth transition for background color */
+    }
+    .btn:hover, .btn:focus {
+        background-color: #0056b3; /* Darken background on hover/focus */
+        color: #fff; /* Keep text color white */
+        text-decoration: none; /* Remove underline from the text */
+    }
 </style>
 </head>
 <body>
+
+<div class="back-to-home">
+    <a href="index.php" class="btn btn-primary">Back to Home</a>
+</div>
 
 <div class="container">
     <!-- Header -->
@@ -154,6 +177,6 @@ $error="You messed up somewhere buddy! ";
 <!-- /Footer--> 
  
 
-<!--/Forgot-password-Form --> 
+
 </body>
 </html>

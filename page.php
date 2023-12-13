@@ -13,89 +13,84 @@ include('includes/config.php');
 <meta name="keywords" content="">
 <meta name="description" content="">
 <title>Car Rental Portal | Page details</title>
+
+<!-- Inline CSS -->
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .page-header {
+    background-color: #ddd;
+    padding: 10px 0;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .section-padding {
+    text-align: center;
+    margin: 20px 0;
+  }
+  .back-to-home {
+    text-align: center;
+    margin-top: 20px;
+  }
+  a.btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  a.btn:hover {
+    background-color: #0056b3;
+  }
+</style>
 </head>
 <body>
         
 <!--Header-->
-<?php include('includes/header.php');?>
-                      <?php 
-$pagetype=$_GET['type'];
-$sql = "SELECT type,detail,PageName from tblpages where type=:pagetype";
+<?php include('includes/header.php'); ?>
+<!-- /Header --> 
+
+<?php 
+$pagetype = $_GET['type'];
+$sql = "SELECT type, detail, PageName FROM tblpages WHERE type=:pagetype";
 $query = $dbh -> prepare($sql);
-$query->bindParam(':pagetype',$pagetype,PDO::PARAM_STR);
+$query->bindParam(':pagetype', $pagetype, PDO::PARAM_STR);
 $query->execute();
-$results=$query->fetchAll(PDO::FETCH_OBJ);
-$cnt=1;
-if($query->rowCount() > 0)
-{
-foreach($results as $result)
-{ ?>
-<section class="page-header aboutus_page">
-  <div class="container">
-    <div class="page-header_wrap">
-      <div class="page-heading">
-        <h1><?php   echo htmlentities($result->PageName); ?></h1>
+$results = $query->fetchAll(PDO::FETCH_OBJ);
+
+if ($query->rowCount() > 0) {
+  foreach ($results as $result) { ?>
+    <div class="page-header">
+      <h1><?php echo htmlentities($result->PageName); ?></h1>
+    </div>
+    <div class="container section-padding">
+      <h2><?php echo htmlentities($result->PageName); ?></h2>
+      <p><?php echo $result->detail; ?></p>
+      <!-- Back to home button -->
+      <div class="back-to-home">
+        <a href="index.php" class="btn">Back to Home</a>
       </div>
-      <ul class="coustom-breadcrumb">
-        <li><a href="#">Home</a></li>
-        <li><?php   echo htmlentities($result->PageName); ?></li>
-      </ul>
     </div>
-  </div>
-  <!-- Dark Overlay-->
-  <div class="dark-overlay"></div>
-</section>
-<section class="about_us section-padding">
-  <div class="container">
-    <div class="section-header text-center">
+  <?php }
+}
+?>
+<!-- /Page Content -->
 
-
-      <h2><?php   echo htmlentities($result->PageName); ?></h2>
-      <p><?php  echo $result->detail; ?> </p>
-    </div>
-   <?php } }?>
-  </div>
-</section>
-<!-- /About-us--> 
-
-
-
-
-
-<<!--Footer -->
-<?php include('includes/footer.php');?>
-<!-- /Footer--> 
-
-<!--Back to top-->
-<div id="back-top" class="back-top"> <a href="#top"><i class="fa fa-angle-up" aria-hidden="true"></i> </a> </div>
-<!--/Back to top--> 
-
-<!--Login-Form -->
-<?php include('includes/login.php');?>
-<!--/Login-Form --> 
-
-<!--Register-Form -->
-<?php include('includes/registration.php');?>
-
-<!--/Register-Form --> 
-
-<!--Forgot-password-Form -->
-<?php include('includes/forgotpassword.php');?>
-<!--/Forgot-password-Form --> 
-
-<!-- Scripts --> 
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script> 
-<script src="assets/js/interface.js"></script> 
-<!--Switcher-->
-<script src="assets/switcher/js/switcher.js"></script>
-<!--bootstrap-slider-JS--> 
-<script src="assets/js/bootstrap-slider.min.js"></script> 
-<!--Slider-JS--> 
-<script src="assets/js/slick.min.js"></script> 
-<script src="assets/js/owl.carousel.min.js"></script>
+<!--Footer -->
+<?php include('includes/footer.php'); ?>
+<!-- /Footer-->
 
 </body>
-
-<!-- Mirrored from themes.webmasterdriver.net/carforyou/demo/about-us.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 16 Jun 2017 07:26:12 GMT -->
 </html>

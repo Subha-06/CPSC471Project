@@ -17,47 +17,41 @@
             font-family: Arial, sans-serif;
         }
 
-        .ts-sidebar {
-            background-color: #4460c4;
+        .ts-navbar {
+            background-color: #fff;
             color: #000;
-            height: 100%;
-            width: 250px;
-            position: fixed;
-            left: 0;
-            top: 0;
-            overflow-y: auto;
-            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 35px;
         }
 
-        .ts-sidebar-menu {
+        .ts-navbar-menu {
             list-style: none;
-            padding: 0;
+            display: flex;
             margin: 0;
         }
 
-        .ts-sidebar-menu li {
-            padding: 10px;
-            border-bottom: 1px solid #ccc;
+        .ts-navbar-menu li {
+            margin-right: 20px;
         }
 
-        .ts-sidebar-menu li a {
+        .ts-navbar-menu a {
             color: #000;
             text-decoration: none;
-            display: block;
         }
 
-        .ts-sidebar-menu li a:hover {
-            background-color: #ddd;
-            color: #333;
+        .ts-navbar-menu a:hover {
+            color: #fff;
         }
 
-        .ts-sidebar-menu li ul {
+        .ts-navbar-menu li ul {
             list-style: none;
             padding-left: 20px;
             display: none;
         }
 
-        .ts-sidebar-menu li:hover ul {
+        .ts-navbar-menu li:hover ul {
             display: block;
         }
     </style>
@@ -65,10 +59,12 @@
 
 <body>
 
-    <!-- Sidebar -->
-    <nav class="ts-sidebar">
-        <ul class="ts-sidebar-menu">
-            <li class="ts-label">Main</li>
+    <!-- Navbar -->
+    <nav class="ts-navbar">
+        <div class="ts-logo">
+            <a href="../index.php"><img src="img/logo.png" alt="image"/></a>
+        </div>
+        <ul class="ts-navbar-menu">
             <li><a href="dashboard.php"><i class="fa fa-dashboard"></i> Dashboard</a></li>
 
             <li>
@@ -89,8 +85,9 @@
 
             <li><a href="manage-bookings.php"><i class="fa fa-users"></i> Manage Booking</a></li>
             <li><a href="manage-conactusquery.php"><i class="fa fa-desktop"></i> Manage Contact Us Query</a></li>
-            <li><a href="manage-pages.php"><i class="fa fa-files-o"></i> Manage Pages</a></li>
             <li><a href="update-contactinfo.php"><i class="fa fa-files-o"></i> Update Contact Info</a></li>
+            <li><a href="logout.php">Logout</a></li>
+
         </ul>
     </nav>
 

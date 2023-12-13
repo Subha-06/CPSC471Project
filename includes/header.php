@@ -2,6 +2,7 @@
   header {
     background-color: #fff;
     padding: 15px;
+    font-family: Arial, sans-serif;
   }
 
   .custom-navbar {

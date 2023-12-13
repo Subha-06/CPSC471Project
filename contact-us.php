@@ -37,6 +37,8 @@ $error="You messed up somewhere buddy! ";
 <meta name="description" content="">
 <title>Simple Contact Page</title>
 
+
+
 <!-- Inline CSS for basic styling -->
 <style>
     body {
@@ -124,9 +126,9 @@ $error="You messed up somewhere buddy! ";
 </head>
 <body>
 
-<div class="back-to-home">
-    <a href="index.php" class="btn btn-primary">Back to Home</a>
-</div>
+<!--Header-->
+<?php include('includes/header.php'); ?>
+<!-- /Header -->
 
 <div class="container">
     <!-- Header -->
@@ -161,7 +163,7 @@ $error="You messed up somewhere buddy! ";
                     <textarea name="message" class="form-control" rows="4" required></textarea>
                 </div>
                 <div class="form-group">
-                    <button class="btn" type="submit" name="send">Send Message</button>
+                    <button class="btn" type="submit" name="send" style="background-color: red;">Send Message</button>
                 </div>
             </form>
         </div>

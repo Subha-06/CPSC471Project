@@ -96,26 +96,45 @@ $error="Something went wrong. Please try again";
 
 	<style>
     .content-wrapper {
-        width: 70%; /* Adjusted width to 70% */
+        width: 70%;
         margin: 0 auto;
         padding: 20px;
         border: 1px solid #ccc;
         box-shadow: 0 0 10px #ccc;
-        background-color: #fff; /* Added white background */
-        border-radius: 10px; /* Added border-radius for rounded corners */
+        background-color: #fff;
+        border-radius: 10px;
     }
 
     .content-wrapper form {
-        display: inline-block;
-        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 
-    /* Added styles for buttons */
+    .form-group {
+        width: 48%; 
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+
     .btn {
-        display: inline-block;
-        margin-right: 10px;
-        margin-bottom: 10px;
-        padding: 10px 20px;
+        padding: 12px 24px;
         font-size: 16px;
         text-align: center;
         text-decoration: none;
@@ -126,21 +145,21 @@ $error="Something went wrong. Please try again";
     }
 
     .btn-primary {
-        background-color: #d9534f; /* Red color for primary button */
+        background-color: #d9534f;
         color: #fff;
     }
 
     .btn-default {
-        background-color: #ccc; /* Default button color */
+        background-color: #ccc;
         color: #000;
     }
 
-    /* Hover effect for buttons */
     .btn:hover {
-        background-color: #5bc0de; /* Light blue on hover */
+        background-color: #5bc0de;
         color: #fff;
     }
 </style>
+
 
 
 

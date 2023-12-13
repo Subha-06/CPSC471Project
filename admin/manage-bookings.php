@@ -51,32 +51,58 @@ $msg="Booking Successfully Confirmed";
 	
 	<title>Car Rental Portal |Admin Manage testimonials   </title>
 
-  <style>
-		.errorWrap {
-    padding: 10px;
-    margin: 0 0 20px 0;
-    background: #fff;
-    border-left: 4px solid #dd3d36;
-    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
-}
-.succWrap{
-    padding: 10px;
-    margin: 0 0 20px 0;
-    background: #fff;
-    border-left: 4px solid #5cb85c;
-    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
-}
-		</style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .content-wrapper {
+            width: 70%;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px #ccc;
+            background-color: #fff;
+            border-radius: 10px;
+        }
+
+        .errorWrap,
+        .succWrap {
+            padding: 10px;
+            margin: 0 0 20px 0;
+            background: #fff;
+            border-left: 4px solid;
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #fb4d4d;
+        }
+    </style>
 
 </head>
 
 <body>
-	<?php include('includes/header.php');?>
-
+<?php include('includes/leftbar.php');?>
 	<div class="ts-main-content">
-		<?php include('includes/leftbar.php');?>
+
 		<div class="content-wrapper">
 			<div class="container-fluid">
 
@@ -173,17 +199,6 @@ echo htmlentities('Confirmed');
 			</div>
 		</div>
 	</div>
-
-	<!-- Loading Scripts -->
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap-select.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.dataTables.min.js"></script>
-	<script src="js/dataTables.bootstrap.min.js"></script>
-	<script src="js/Chart.min.js"></script>
-	<script src="js/fileinput.js"></script>
-	<script src="js/chartData.js"></script>
-	<script src="js/main.js"></script>
 </body>
 </html>
 <?php } ?>

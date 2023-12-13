@@ -196,7 +196,6 @@ $error="Something went wrong. Please try again";
 <option value=""> Select </option>
 <?php $ret="select id,BrandName from tblbrands";
 $query= $dbh -> prepare($ret);
-//$query->bindParam(':id',$id, PDO::PARAM_STR);
 $query-> execute();
 $results = $query -> fetchAll(PDO::FETCH_OBJ);
 if($query -> rowCount() > 0)

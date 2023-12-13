@@ -12,17 +12,17 @@
   }
 
   .logo a {
-    /* Make the logo a block-level element to cover the entire header */
+    
     display: block;
   }
 
   .logo img {
-    max-height: 50px; /* Adjust as needed */
+    max-height: 50px; 
   }
 
   .navbar {
     display: flex;
-    margin-left: 20px; /* Adjust the margin as needed */
+    margin-left: 20px; 
   }
 
   .navbar ul {
@@ -32,7 +32,7 @@
   }
 
   .navbar li {
-    margin-right: 100px; /* Adjust margin */
+    margin-right: 100px; 
   }
 
   .navbar a {
@@ -47,7 +47,7 @@
 
   .dropdown-menu {
     position: absolute;
-    top: 80%; /* Adjust positioning */
+    top: 80%; 
     left: 0;
     list-style: none;
     padding: 20px;
@@ -58,7 +58,7 @@
 
 <header>
   <div class="custom-navbar">
-    <!-- Wrap the logo with an anchor tag -->
+
     <div class="logo">
       <a href="../index.php"><img src="img/logo.png" alt="image"/></a>
     </div>

@@ -96,9 +96,9 @@ if(isset($_POST['login']))
 
 <body>
 
-<!--Header-->
+
 <?php include('includes/header.php'); ?>
-<!-- /Header -->
+
 
 <div class="form-content">
     <div class="container">

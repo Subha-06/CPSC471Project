@@ -12,12 +12,12 @@
   }
 
   .logo img {
-    max-height: 50px; /* Adjust as needed */
+    max-height: 50px; 
   }
 
   .navbar {
     display: flex;
-    margin-left: 20px; /* Adjust the margin as needed */
+    margin-left: 20px; 
   }
 
   .navbar ul {
@@ -84,7 +84,6 @@
             </a>
             <ul class="dropdown-menu">
               <li><a href="profile.php">Profile Settings</a></li>
-              <li><a href="my-booking.php">My Booking</a></li>
               <li><a href="logout.php">Sign Out</a></li>
             </ul>
           </li>

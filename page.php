@@ -58,9 +58,9 @@ include('includes/config.php');
 </head>
 <body>
         
-<!--Header-->
+
 <?php include('includes/header.php'); ?>
-<!-- /Header --> 
+
 
 <?php 
 $pagetype = $_GET['type'];
@@ -78,7 +78,6 @@ if ($query->rowCount() > 0) {
     <div class="container section-padding">
       <h2><?php echo htmlentities($result->PageName); ?></h2>
       <p><?php echo $result->detail; ?></p>
-      <!-- Back to home button -->
       <div class="back-to-home">
         <a href="index.php" class="btn">Back to Home</a>
       </div>
@@ -86,11 +85,9 @@ if ($query->rowCount() > 0) {
   <?php }
 }
 ?>
-<!-- /Page Content -->
 
-<!--Footer -->
 <?php include('includes/footer.php'); ?>
-<!-- /Footer-->
+
 
 </body>
 </html>

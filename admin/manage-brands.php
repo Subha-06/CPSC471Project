@@ -138,7 +138,6 @@ $msg="Page data updated  successfully";
 
 						<h2 class="page-title">Manage Brands</h2>
 
-						<!-- Zero Configuration Table -->
 						<div class="panel panel-default">
 							<div class="panel-heading">Listed  Brands</div>
 							<div class="panel-body">

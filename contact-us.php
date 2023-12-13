@@ -37,9 +37,6 @@ $error="You messed up somewhere buddy! ";
 <meta name="description" content="">
 <title>Simple Contact Page</title>
 
-
-
-<!-- Inline CSS for basic styling -->
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -126,9 +123,9 @@ $error="You messed up somewhere buddy! ";
 </head>
 <body>
 
-<!--Header-->
+
 <?php include('includes/header.php'); ?>
-<!-- /Header -->
+
 
 <div class="container">
     <!-- Header -->

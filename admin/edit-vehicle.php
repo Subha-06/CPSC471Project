@@ -96,9 +96,9 @@ $msg="Data updated successfully";
 </head>
 
 <body>
-	<?php include('includes/header.php');?>
-	<div class="ts-main-content">
 	<?php include('includes/leftbar.php');?>
+	<div class="ts-main-content">
+	
 		<div class="content-wrapper">
 			<div class="container-fluid">
 
@@ -138,7 +138,6 @@ foreach($results as $result)
 <option value="<?php echo htmlentities($result->bid);?>"><?php echo htmlentities($bdname=$result->BrandName); ?> </option>
 <?php $ret="select id,BrandName from tblbrands";
 $query= $dbh -> prepare($ret);
-//$query->bindParam(':id',$id, PDO::PARAM_STR);
 $query-> execute();
 $resultss = $query -> fetchAll(PDO::FETCH_OBJ);
 if($query -> rowCount() > 0)

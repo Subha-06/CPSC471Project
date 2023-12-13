@@ -7,7 +7,7 @@ if(strlen($_SESSION['alogin'])==0)
     header('location:index.php');
 }
 else{
-    // Code for change password	
+    
     if(isset($_POST['submit']))
     {
         $brand=$_POST['brand'];
@@ -81,7 +81,7 @@ else{
             border-radius: 5px;
         }
 
-        /* New styling for content-wrapper */
+        
         .content-wrapper:before {
             content: "";
             position: absolute;
@@ -99,14 +99,14 @@ else{
             transform: scale(1.1);
         }
 
-        /* Styling for the title */
+        
         h2 {
             margin: 0 0 30px 0;
             color: #333;
             text-align: center;
         }
 
-        /* Styling for the input fields */
+        
         input[type="text"], input[type="email"], input[type="password"] {
             width: 100%;
             padding: 10px;
@@ -116,7 +116,7 @@ else{
             font-size: 16px;
         }
 
-        /* Styling for the submit button */
+        
         button[type="submit"] {
             width: 100%;
             padding: 10px;

@@ -35,7 +35,6 @@ $query -> execute();
 $msg="Booking Successfully Confirmed";
 }
 
-
  ?>
 
 <!doctype html>
@@ -111,7 +110,6 @@ $msg="Booking Successfully Confirmed";
 
 						<h2 class="page-title">Manage Bookings</h2>
 
-						<!-- Zero Configuration Table -->
 						<div class="panel panel-default">
 							<div class="panel-heading">Bookings Info</div>
 							<div class="panel-body">

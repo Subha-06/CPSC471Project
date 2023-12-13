@@ -44,7 +44,6 @@ echo "<script>alert('Something went wrong. Please try again');</script>";
 <meta name="description" content="">
 <title>Car Rental Portal | Vehicle Details</title>
 
-<!-- Inline CSS -->
 <style>
   body {
     font-family: Arial, sans-serif;
@@ -98,7 +97,6 @@ echo "<script>alert('Something went wrong. Please try again');</script>";
     display: inline;
     margin-right: 10px;
   }
-  /* Additional styles can be added as needed */
 </style>
 </head>
 <body>
@@ -119,7 +117,6 @@ if ($query->rowCount() > 0) {
     $_SESSION['brndid'] = $result->bid;  
 ?>
 
-<!-- Vehicle Image Section -->
 <section id="carimage" class="container">
   <img src="admin/img/vehicleimages/<?php echo htmlentities($result->Vimage1); ?>" class="img-responsive" alt="image">
 </section>
@@ -130,15 +127,12 @@ if ($query->rowCount() > 0) {
     <h2><?php echo htmlentities($result->BrandName); ?>, <?php echo htmlentities($result->VehiclesTitle); ?></h2>
     <p class="list-price">$<?php echo htmlentities($result->PricePerDay); ?> Per Day</p>
     
-    <!-- Vehicle Overview -->
     <p><?php echo htmlentities($result->VehiclesOverview); ?></p>
     
-    <!-- Vehicle Features -->
     <ul class="features_list">
       <li><?php echo htmlentities($result->SeatingCapacity); ?> seats</li>
       <li><?php echo htmlentities($result->ModelYear); ?> model</li>
       <li><?php echo htmlentities($result->FuelType); ?></li>
-      <!-- Additional features can be listed here -->
     </ul>
   </div>
 

@@ -60,27 +60,21 @@ $msg="Profile Updated Successfully";
     </style>
 </head>
 <body>
-        
-<!--Header-->
 <?php include('includes/header.php');?>
-<!-- /Header --> 
-<!--Page Header-->
 <section class="page-header profile_page">
   <div class="container">
     <div class="page-header_wrap">
       <div class="page-heading">
         <h1>Your Profile</h1>
       </div>
-      <ul class="coustom-breadcrumb">
+      <ul class="change">
         <li><a href="#">Home</a></li>
         <li>Profile</li>
       </ul>
     </div>
   </div>
-  <!-- Dark Overlay-->
   <div class="dark-overlay"></div>
 </section>
-<!-- /Page Header--> 
 
 
 <?php 
@@ -166,25 +160,11 @@ foreach($results as $result)
     </div>
   </div>
 </section>
-<!--/Profile-setting--> 
 
- 
 
-<!--Back to top-->
 <div id="back-top" class="back-top"> <a href="#top"><i class="fa fa-angle-up" aria-hidden="true"></i> </a> </div>
-<!--/Back to top--> 
 
-<!--Login-Form -->
-<?php include('includes/login.php');?>
-<!--/Login-Form --> 
-
-<!--Register-Form -->
-<?php include('includes/registration.php');?>
-
-<!--/Register-Form --> 
-<<!--Footer -->
 <?php include('includes/footer.php');?>
-<!-- /Footer-->
 
 </body>
 </html>

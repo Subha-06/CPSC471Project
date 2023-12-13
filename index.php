@@ -74,22 +74,18 @@ error_reporting(0);
 </head>
 <body>
         
-<!--Header-->
 <?php include('includes/header.php'); ?>
-<!-- /Header --> 
-
-<!-- Resent Cat-->
+ 
 <section class="section-padding">
   <div class="container">
     <div class="section-header text-center">
-      <h2>Find the Best <span>CarForYou</span></h2>
+      <h2>Find the Best Car For You And Your Family! </h2>
       <p>Explore our available cars in the <a href="car-listing.php">Car Listing</a> section.</p>
       <p>Register or log in to create your profile.</p>
       <p>List your own vehicles or rent one from our community.</p>
       <p>Enjoy your journey with Pathao Car Rentals!</p>
     </div>
 
-    <!-- Recently Listed New Cars -->
     <div>
       <?php
       $sql = "SELECT tblvehicles.VehiclesTitle, tblbrands.BrandName, tblvehicles.PricePerDay, tblvehicles.FuelType, tblvehicles.ModelYear, tblvehicles.id, tblvehicles.SeatingCapacity, tblvehicles.VehiclesOverview FROM tblvehicles JOIN tblbrands ON tblbrands.id = tblvehicles.VehiclesBrand";
@@ -124,24 +120,21 @@ error_reporting(0);
     </div>
   </div>
 </section>
-<!-- /Resent Cat -->
 
- 
 
-<!--Back to top-->
+
 <div id="back-top" class="back-top"> <a href="#top"><i class="fa fa-angle-up" aria-hidden="true"></i></a> </div>
-<!--/Back to top--> 
 
-<!--Login-Form -->
+
+
 <?php include('includes/login.php'); ?>
-<!--/Login-Form --> 
 
-<!--Register-Form -->
+
+
 <?php include('includes/registration.php'); ?>
-<!--/Register-Form --> 
-<!--Footer -->
+
+
 <?php include('includes/footer.php'); ?>
-<!-- /Footer-->
 
 </body>
 </html>

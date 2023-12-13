@@ -116,9 +116,8 @@ $error="Something went wrong. Please try again";
 </head>
 
 <body>
-	<?php include('includes/header.php');?>
+<?php include('includes/leftbar.php');?>
 	<div class="ts-main-content">
-	<?php include('includes/leftbar.php');?>
 		<div class="content-wrapper">
 			<div class="container-fluid">
 
@@ -320,9 +319,6 @@ Image 5<input type="file" name="img5">
 </div>
 </div>
 
-
-
-
 											<div class="form-group">
 												<div class="col-sm-8 col-sm-offset-2">
 													<button class="btn btn-default" type="reset">Cancel</button>
@@ -335,14 +331,8 @@ Image 5<input type="file" name="img5">
 								</div>
 							</div>
 						</div>
-						
-					
-
 					</div>
 				</div>
-				
-			
-
 			</div>
 		</div>
 	</div>

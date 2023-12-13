@@ -34,6 +34,7 @@
 
         .ts-navbar-menu li {
             margin-right: 20px;
+            position: relative;
         }
 
         .ts-navbar-menu a {
@@ -42,18 +43,44 @@
         }
 
         .ts-navbar-menu a:hover {
-            color: #fff;
+            color: #333;
         }
 
         .ts-navbar-menu li ul {
             list-style: none;
-            padding-left: 20px;
+            padding-left: 0;
             display: none;
+            position: absolute;
+            background-color: #fff;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            top: 100%;
+            left: 0;
+            width: 150px; 
+            z-index: 1;
         }
 
-        .ts-navbar-menu li:hover ul {
+        .ts-navbar-menu li:hover ul,
+        .ts-navbar-menu li ul:hover {
             display: block;
         }
+
+        .ts-navbar-menu li ul li {
+            display: block;
+            margin: 0;
+        }
+
+        .ts-navbar-menu li ul a {
+            color: #000;
+            padding: 10px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .ts-navbar-menu li ul a:hover {
+            color: #fff;
+            background-color: #007BFF;
+        }
+        
     </style>
 </head>
 

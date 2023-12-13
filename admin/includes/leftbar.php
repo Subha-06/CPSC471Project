@@ -18,7 +18,7 @@
         }
 
         .ts-sidebar {
-            background-color: #4f5362;
+            background-color: #4460c4;
             color: #000;
             height: 100%;
             width: 250px;

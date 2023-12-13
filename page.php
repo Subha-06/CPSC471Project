@@ -14,7 +14,7 @@ include('includes/config.php');
 <meta name="description" content="">
 <title>Car Rental Portal | Page details</title>
 
-<!-- Inline CSS -->
+
 <style>
   body {
     font-family: Arial, sans-serif;

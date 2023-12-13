@@ -15,7 +15,7 @@ error_reporting(0);
 <meta name="description" content="">
 <title>Pathao Car Rental</title>
 
-<!-- Inline CSS -->
+
 <style>
   body {
     font-family: Arial, sans-serif;

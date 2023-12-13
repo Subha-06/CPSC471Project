@@ -11,6 +11,11 @@
     align-items: center;
   }
 
+  .logo a {
+    /* Make the logo a block-level element to cover the entire header */
+    display: block;
+  }
+
   .logo img {
     max-height: 50px; /* Adjust as needed */
   }
@@ -53,9 +58,9 @@
 
 <header>
   <div class="custom-navbar">
-    <!-- Use the same logo as the user navbar -->
+    <!-- Wrap the logo with an anchor tag -->
     <div class="logo">
-      <a href="index.php"><img src="img/logo.png" alt="image"/></a>
+      <a href="../index.php"><img src="img/logo.png" alt="image"/></a>
     </div>
     <div class="navbar">
       <ul class="ts-profile-nav">

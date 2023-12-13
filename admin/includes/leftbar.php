@@ -17,58 +17,81 @@
             font-family: Arial, sans-serif;
         }
 
-        .ts-sidebar {
-            background-color: #4460c4;
+        .ts-navbar {
+            background-color: #fff;
             color: #000;
-            height: 100%;
-            width: 250px;
-            position: fixed;
-            left: 0;
-            top: 0;
-            overflow-y: auto;
-            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 35px;
         }
 
-        .ts-sidebar-menu {
+        .ts-navbar-menu {
             list-style: none;
-            padding: 0;
+            display: flex;
             margin: 0;
         }
 
-        .ts-sidebar-menu li {
-            padding: 10px;
-            border-bottom: 1px solid #ccc;
+        .ts-navbar-menu li {
+            margin-right: 20px;
+            position: relative;
         }
 
-        .ts-sidebar-menu li a {
+        .ts-navbar-menu a {
             color: #000;
             text-decoration: none;
-            display: block;
         }
 
-        .ts-sidebar-menu li a:hover {
-            background-color: #ddd;
+        .ts-navbar-menu a:hover {
             color: #333;
         }
 
-        .ts-sidebar-menu li ul {
+        .ts-navbar-menu li ul {
             list-style: none;
-            padding-left: 20px;
+            padding-left: 0;
             display: none;
+            position: absolute;
+            background-color: #fff;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            top: 100%;
+            left: 0;
+            width: 150px; 
+            z-index: 1;
         }
 
-        .ts-sidebar-menu li:hover ul {
+        .ts-navbar-menu li:hover ul,
+        .ts-navbar-menu li ul:hover {
             display: block;
         }
+
+        .ts-navbar-menu li ul li {
+            display: block;
+            margin: 0;
+        }
+
+        .ts-navbar-menu li ul a {
+            color: #000;
+            padding: 10px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .ts-navbar-menu li ul a:hover {
+            color: #fff;
+            background-color: #007BFF;
+        }
+        
     </style>
 </head>
 
 <body>
 
-    <!-- Sidebar -->
-    <nav class="ts-sidebar">
-        <ul class="ts-sidebar-menu">
-            <li class="ts-label">Main</li>
+    <!-- Navbar -->
+    <nav class="ts-navbar">
+        <div class="ts-logo">
+            <a href="../index.php"><img src="img/logo.png" alt="image"/></a>
+        </div>
+        <ul class="ts-navbar-menu">
             <li><a href="dashboard.php"><i class="fa fa-dashboard"></i> Dashboard</a></li>
 
             <li>
@@ -89,8 +112,9 @@
 
             <li><a href="manage-bookings.php"><i class="fa fa-users"></i> Manage Booking</a></li>
             <li><a href="manage-conactusquery.php"><i class="fa fa-desktop"></i> Manage Contact Us Query</a></li>
-            <li><a href="manage-pages.php"><i class="fa fa-files-o"></i> Manage Pages</a></li>
             <li><a href="update-contactinfo.php"><i class="fa fa-files-o"></i> Update Contact Info</a></li>
+            <li><a href="logout.php">Logout</a></li>
+
         </ul>
     </nav>
 

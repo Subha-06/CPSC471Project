@@ -22,47 +22,62 @@ else{
 	<title>Car Rental Portal | Admin Dashboard</title>
 
 	<style>
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    min-height: 100vh;
-  }
+        .ts-main-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+		margin-top: 50px;
+    }
 
-  .ts-sidebar {
-    background-color: #ff0000;
-    color: #fff;
-    height: 100%;
-    width: 250px;
-    position: fixed;
-    left: 0;
-    top: 0;
-    overflow-y: auto;
-    padding-top: 20px;
-    z-index: 1;
-  }
+    .content-wrapper {
+        max-width: 80%; 
+        width: 100%;
+        padding: 20px; 
+    }
 
-  .ts-main-content {
-    margin-left: 10px;
-    flex: 1;
-    padding: 20px;
-  }
+        .row .panel {
+            margin-bottom: 20px;
+        }
 
-  .content-wrapper {
-    width: 100%;
-  }
-</style>
+        .stat-panel {
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-panel-number {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .stat-panel-title {
+            font-size: 16px;
+            color: #888;
+        }
+
+        .block-anchor.panel-footer {
+            display: block;
+            padding: 10px;
+            background-color: #428bca;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
 
 
 
 </head>
 
 <body>
-<?php include('includes/header.php');?>
+
+<?php include('includes/leftbar.php');?>
 
 	<div class="ts-main-content">
-<?php include('includes/leftbar.php');?>
 		<div class="content-wrapper">
 			<div class="container-fluid">
 
@@ -78,25 +93,8 @@ else{
 										<div class="panel panel-default">
 											<div class="panel-body bk-primary text-light">
 												<div class="stat-panel text-center">
+
 <?php 
-$sql ="SELECT id from tblusers ";
-$query = $dbh -> prepare($sql);
-$query->execute();
-$results=$query->fetchAll(PDO::FETCH_OBJ);
-$regusers=$query->rowCount();
-?>
-													<div class="stat-panel-number h1 "><?php echo htmlentities($regusers);?></div>
-													<div class="stat-panel-title text-uppercase">Reg Users</div>
-												</div>
-											</div>
-											<a href="reg-users.php" class="block-anchor panel-footer">Full Detail <i class="fa fa-arrow-right"></i></a>
-										</div>
-									</div>
-									<div class="col-md-3">
-										<div class="panel panel-default">
-											<div class="panel-body bk-success text-light">
-												<div class="stat-panel text-center">
-												<?php 
 $sql1 ="SELECT id from tblvehicles ";
 $query1 = $dbh -> prepare($sql1);;
 $query1->execute();
@@ -107,7 +105,7 @@ $totalvehicle=$query1->rowCount();
 													<div class="stat-panel-title text-uppercase">Listed Vehicles</div>
 												</div>
 											</div>
-											<a href="manage-vehicles.php" class="block-anchor panel-footer text-center">Full Detail &nbsp; <i class="fa fa-arrow-right"></i></a>
+											<a href="manage-vehicles.php" class="block-anchor panel-footer text-center" style="background-color: #fb4d4d;">Full Detail &nbsp; <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 									<div class="col-md-3">
@@ -126,7 +124,7 @@ $bookings=$query2->rowCount();
 													<div class="stat-panel-title text-uppercase">Total Bookings</div>
 												</div>
 											</div>
-											<a href="manage-bookings.php" class="block-anchor panel-footer text-center">Full Detail &nbsp; <i class="fa fa-arrow-right"></i></a>
+											<a href="manage-vehicles.php" class="block-anchor panel-footer text-center" style="background-color: #fb4d4d;">Full Detail &nbsp; <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 									<div class="col-md-3">
@@ -144,7 +142,7 @@ $brands=$query3->rowCount();
 													<div class="stat-panel-title text-uppercase">Listed Brands</div>
 												</div>
 											</div>
-											<a href="manage-brands.php" class="block-anchor panel-footer text-center">Full Detail &nbsp; <i class="fa fa-arrow-right"></i></a>
+											<a href="manage-vehicles.php" class="block-anchor panel-footer text-center" style="background-color: #fb4d4d;">Full Detail &nbsp; <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 								</div>
@@ -166,25 +164,8 @@ $brands=$query3->rowCount();
 										<div class="panel panel-default">
 											<div class="panel-body bk-primary text-light">
 												<div class="stat-panel text-center">
+
 <?php 
-$sql4 ="SELECT id from tblsubscribers ";
-$query4 = $dbh -> prepare($sql4);
-$query4->execute();
-$results4=$query4->fetchAll(PDO::FETCH_OBJ);
-$subscribers=$query4->rowCount();
-?>
-													<div class="stat-panel-number h1 "><?php echo htmlentities($subscribers);?></div>
-													<div class="stat-panel-title text-uppercase">Subscibers</div>
-												</div>
-											</div>
-											<a href="manage-subscribers.php" class="block-anchor panel-footer">Full Detail <i class="fa fa-arrow-right"></i></a>
-										</div>
-									</div>
-									<div class="col-md-3">
-										<div class="panel panel-default">
-											<div class="panel-body bk-success text-light">
-												<div class="stat-panel text-center">
-												<?php 
 $sql6 ="SELECT id from tblcontactusquery ";
 $query6 = $dbh -> prepare($sql6);;
 $query6->execute();
@@ -195,26 +176,14 @@ $query=$query6->rowCount();
 													<div class="stat-panel-title text-uppercase">Queries</div>
 												</div>
 											</div>
-											<a href="manage-conactusquery.php" class="block-anchor panel-footer text-center">Full Detail &nbsp; <i class="fa fa-arrow-right"></i></a>
+											<a href="manage-vehicles.php" class="block-anchor panel-footer text-center" style="background-color: #fb4d4d;">Full Detail &nbsp; <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 									<div class="col-md-3">
 										<div class="panel panel-default">
 											<div class="panel-body bk-info text-light">
-												<div class="stat-panel text-center">
-<?php 
-$sql5 ="SELECT id from tbltestimonial ";
-$query5= $dbh -> prepare($sql5);
-$query5->execute();
-$results5=$query5->fetchAll(PDO::FETCH_OBJ);
-$testimonials=$query5->rowCount();
-?>
-
-													<div class="stat-panel-number h1 "><?php echo htmlentities($testimonials);?></div>
-													<div class="stat-panel-title text-uppercase">Testimonials</div>
-												</div>
+												<div class="stat-panel text-center"></div>
 											</div>
-											<a href="testimonials.php" class="block-anchor panel-footer text-center">Full Detail &nbsp; <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 								
@@ -226,41 +195,7 @@ $testimonials=$query5->rowCount();
 			</div>
 		</div>
 	</div>
-
-	<!-- Loading Scripts -->
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap-select.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.dataTables.min.js"></script>
-	<script src="js/dataTables.bootstrap.min.js"></script>
-	<script src="js/Chart.min.js"></script>
-	<script src="js/fileinput.js"></script>
-	<script src="js/chartData.js"></script>
-	<script src="js/main.js"></script>
 	
-	<script>
-		
-	window.onload = function(){
-    
-		// Line chart from swirlData for dashReport
-		var ctx = document.getElementById("dashReport").getContext("2d");
-		window.myLine = new Chart(ctx).Line(swirlData, {
-			responsive: true,
-			scaleShowVerticalLines: false,
-			scaleBeginAtZero : true,
-			multiTooltipTemplate: "<%if (label){%><%=label%>: <%}%><%= value %>",
-		}); 
-		
-		// Pie Chart from doughutData
-		var doctx = document.getElementById("chart-area3").getContext("2d");
-		window.myDoughnut = new Chart(doctx).Pie(doughnutData, {responsive : true});
-
-		// Dougnut Chart from doughnutData
-		var doctx = document.getElementById("chart-area4").getContext("2d");
-		window.myDoughnut = new Chart(doctx).Doughnut(doughnutData, {responsive : true});
-
-	}
-	</script>
 </body>
 </html>
 <?php } ?>

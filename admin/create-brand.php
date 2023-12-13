@@ -57,7 +57,7 @@ else{
 
         .content-wrapper {
             width: 80%;
-            max-width: 600px; /* Adjust the maximum width as needed */
+            max-width: 600px; 
             padding: 40px;
             background-color: #fff;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

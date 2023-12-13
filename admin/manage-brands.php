@@ -36,32 +36,100 @@ $msg="Page data updated  successfully";
 	<title>Car Rental Portal |Admin Manage Brands   </title>
 
 
-  <style>
-		.errorWrap {
-    padding: 10px;
-    margin: 0 0 20px 0;
-    background: #fff;
-    border-left: 4px solid #dd3d36;
-    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
-}
-.succWrap{
-    padding: 10px;
-    margin: 0 0 20px 0;
-    background: #fff;
-    border-left: 4px solid #5cb85c;
-    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
-}
-		</style>
+	<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f4f4;
+    }
+
+    .ts-main-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .content-wrapper {
+        width: 80%;
+        max-width: 800px;
+        padding: 30px;
+        background-color: #fff;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        transition: box-shadow 0.3s;
+    }
+
+    .content-wrapper:hover {
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .panel-heading {
+        background-color: #fb4d4d;
+        color: #fff;
+        padding: 10px;
+        border-radius: 5px 5px 0 0;
+    }
+
+    .panel-body {
+        padding: 20px;
+    }
+
+    table {
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: collapse;
+    }
+
+    table, th, td {
+        border: 1px solid #ddd;
+    }
+
+    th, td {
+        padding: 12px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #fb4d4d;
+        color: #fff;
+    }
+
+    tbody tr:hover {
+        background-color: #f5f5f5;
+    }
+
+    .fa-edit,
+    .fa-close {
+        font-size: 18px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    .fa-close {
+        color: #dc3545;
+    }
+
+	.edit-link {
+        color: #007bff; /* Set the color to your preference */
+        text-decoration: none;
+        border-bottom: 1px dashed #007bff; /* Add an underline effect */
+        transition: color 0.3s; /* Add a smooth color transition on hover */
+    }
+
+    .edit-link:hover {
+        color: #0056b3; /* Change the color on hover */
+    }
+	
+</style>
+
 
 </head>
 
 <body>
-	<?php include('includes/header.php');?>
-
+<?php include('includes/leftbar.php');?>
 	<div class="ts-main-content">
-		<?php include('includes/leftbar.php');?>
 		<div class="content-wrapper">
 			<div class="container-fluid">
 
@@ -114,38 +182,24 @@ foreach($results as $result)
 											<td><?php echo htmlentities($result->BrandName);?></td>
 											<td><?php echo htmlentities($result->CreationDate);?></td>
 											<td><?php echo htmlentities($result->UpdationDate);?></td>
-<td><a href="edit-brand.php?id=<?php echo $result->id;?>"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
-<a href="manage-brands.php?del=<?php echo $result->id;?>" onclick="return confirm('Do you want to delete');"><i class="fa fa-close"></i></a></td>
+											<td><a href="edit-brand.php?id=<?php echo $result->id; ?>" class="edit-link">Edit</a>&nbsp;&nbsp;
+            									<a href="manage-brands.php?del=<?php echo $result->id; ?>" onclick="return confirm('Do you want to delete');">
+                									<i class="fa fa-close"></i>
+												</a>
+											</td>
 										</tr>
 										<?php $cnt=$cnt+1; }} ?>
 										
 									</tbody>
 								</table>
-
-						
-
 							</div>
 						</div>
-
-					
-
 					</div>
 				</div>
 
 			</div>
 		</div>
 	</div>
-
-	<!-- Loading Scripts -->
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap-select.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.dataTables.min.js"></script>
-	<script src="js/dataTables.bootstrap.min.js"></script>
-	<script src="js/Chart.min.js"></script>
-	<script src="js/fileinput.js"></script>
-	<script src="js/chartData.js"></script>
-	<script src="js/main.js"></script>
 </body>
 </html>
 <?php } ?>

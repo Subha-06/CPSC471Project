@@ -19,9 +19,6 @@ $query -> execute();
 
 $msg="Testimonial Successfully Inacrive";
 }
-
-
-
  ?>
 
 <!doctype html>
@@ -60,10 +57,10 @@ $msg="Testimonial Successfully Inacrive";
 </head>
 
 <body>
-	<?php include('includes/header.php');?>
+	<?php include('includes/leftbar.php');?>
 
 	<div class="ts-main-content">
-		<?php include('includes/leftbar.php');?>
+		
 		<div class="content-wrapper">
 			<div class="container-fluid">
 
@@ -71,8 +68,6 @@ $msg="Testimonial Successfully Inacrive";
 					<div class="col-md-12">
 
 						<h2 class="page-title">Manage Contact Us Queries</h2>
-
-						<!-- Zero Configuration Table -->
 						<div class="panel panel-default">
 							<div class="panel-heading">User queries</div>
 							<div class="panel-body">
@@ -112,52 +107,32 @@ $cnt=1;
 if($query->rowCount() > 0)
 {
 foreach($results as $result)
-{				?>	
-										<tr>
-											<td><?php echo htmlentities($cnt);?></td>
-											<td><?php echo htmlentities($result->name);?></td>
-											<td><?php echo htmlentities($result->EmailId);?></td>
-											<td><?php echo htmlentities($result->ContactNumber);?></td>
-											<td><?php echo htmlentities($result->Message);?></td>
-											<td><?php echo htmlentities($result->PostingDate);?></td>
-																<?php if($result->status==1)
+{?>	<tr>
+<td><?php echo htmlentities($cnt);?></td>
+<td><?php echo htmlentities($result->name);?></td>
+<td><?php echo htmlentities($result->EmailId);?></td>
+<td><?php echo htmlentities($result->ContactNumber);?></td>
+<td><?php echo htmlentities($result->Message);?></td>
+<td><?php echo htmlentities($result->PostingDate);?></td>
+<?php if($result->status==1)
 {
 	?><td>Read</td>
 <?php } else {?>
-
 <td><a href="manage-conactusquery.php?eid=<?php echo htmlentities($result->id);?>" onclick="return confirm('Do you really want to read')" >Pending</a>
 </td>
 <?php } ?>
 										</tr>
 										<?php $cnt=$cnt+1; }} ?>
-										
+					
 									</tbody>
 								</table>
-
-						
-
 							</div>
 						</div>
-
-					
-
 					</div>
 				</div>
-
 			</div>
 		</div>
 	</div>
-
-	<!-- Loading Scripts -->
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap-select.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.dataTables.min.js"></script>
-	<script src="js/dataTables.bootstrap.min.js"></script>
-	<script src="js/Chart.min.js"></script>
-	<script src="js/fileinput.js"></script>
-	<script src="js/chartData.js"></script>
-	<script src="js/main.js"></script>
 </body>
 </html>
 <?php } ?>

@@ -17,8 +17,6 @@ $query -> bindParam(':delid',$delid, PDO::PARAM_STR);
 $query -> execute();
 $msg="Vehicle  record deleted successfully";
 }
-
-
  ?>
 
 <!doctype html>
@@ -68,7 +66,6 @@ $msg="Vehicle  record deleted successfully";
 
 						<h2 class="page-title">Manage Vehicles</h2>
 
-						<!-- Zero Configuration Table -->
 						<div class="panel panel-default">
 							<div class="panel-heading">Vehicle Details</div>
 							<div class="panel-body">
@@ -123,17 +120,10 @@ foreach($results as $result)
 										
 									</tbody>
 								</table>
-
-						
-
 							</div>
 						</div>
-
-					
-
 					</div>
 				</div>
-
 			</div>
 		</div>
 	</div>

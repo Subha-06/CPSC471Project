@@ -7,7 +7,7 @@ if(strlen($_SESSION['alogin'])==0)
 header('location:index.php');
 }
 else{
-// Code for change password	
+// Code for changing information
 if(isset($_POST['submit']))
 {
 $address=$_POST['address'];

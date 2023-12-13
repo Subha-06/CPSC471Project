@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS `admin` (
 
 
 INSERT INTO `admin` (`id`, `UserName`, `Password`, `updationDate`) VALUES
-(1, 'admin', 'password', '2017-06-18 12:22:38');
+(1, 'admin', 'password', '2023-12-12 0:0:0');
 
 
 

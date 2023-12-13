@@ -94,24 +94,55 @@ $error="Something went wrong. Please try again";
 	
 	<title>Car Rental Portal | Admin Post Vehicle</title>
 
-<style>
-		.errorWrap {
-    padding: 10px;
-    margin: 0 0 20px 0;
-    background: #fff;
-    border-left: 4px solid #dd3d36;
-    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
-}
-.succWrap{
-    padding: 10px;
-    margin: 0 0 20px 0;
-    background: #fff;
-    border-left: 4px solid #5cb85c;
-    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
-}
-		</style>
+	<style>
+    .content-wrapper {
+        width: 70%; /* Adjusted width to 70% */
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 10px #ccc;
+        background-color: #fff; /* Added white background */
+        border-radius: 10px; /* Added border-radius for rounded corners */
+    }
+
+    .content-wrapper form {
+        display: inline-block;
+        width: 100%;
+    }
+
+    /* Added styles for buttons */
+    .btn {
+        display: inline-block;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .btn-primary {
+        background-color: #d9534f; /* Red color for primary button */
+        color: #fff;
+    }
+
+    .btn-default {
+        background-color: #ccc; /* Default button color */
+        color: #000;
+    }
+
+    /* Hover effect for buttons */
+    .btn:hover {
+        background-color: #5bc0de; /* Light blue on hover */
+        color: #fff;
+    }
+</style>
+
+
 
 </head>
 
@@ -271,7 +302,6 @@ Image 5<input type="file" name="img5">
 <div class="form-group">
 <div class="col-sm-3">
 <div class="checkbox checkbox-inline">
-<input type="checkbox" id="powersteering" name="powersteering" value="1">
 <input type="checkbox" id="powersteering" name="powersteering" value="1">
 <label for="inlineCheckbox5"> Power Steering </label>
 </div>

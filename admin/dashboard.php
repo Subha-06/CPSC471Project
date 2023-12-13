@@ -22,14 +22,6 @@ else{
 	<title>Car Rental Portal | Admin Dashboard</title>
 
 	<style>
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    min-height: 100vh;
-  }
-
   .ts-sidebar {
     background-color: #ff0000;
     color: #fff;
@@ -40,20 +32,19 @@ else{
     top: 0;
     overflow-y: auto;
     padding-top: 20px;
-    z-index: 1;
+    z-index: 1; 
   }
 
   .ts-main-content {
-    margin-left: 10px;
-    flex: 1;
-    padding: 20px;
+    margin-left: 250px;
+    width: calc(100% - 250px); /* Adjust the width */
+    z-index: 0; 
   }
 
   .content-wrapper {
     width: 100%;
   }
 </style>
-
 
 
 </head>

@@ -182,11 +182,10 @@ foreach($results as $result)
 											<td><?php echo htmlentities($result->BrandName);?></td>
 											<td><?php echo htmlentities($result->CreationDate);?></td>
 											<td><?php echo htmlentities($result->UpdationDate);?></td>
-											<td><a href="edit-brand.php?id=<?php echo $result->id; ?>" class="edit-link">Edit</a>&nbsp;&nbsp;
-            									<a href="manage-brands.php?del=<?php echo $result->id; ?>" onclick="return confirm('Do you want to delete');">
-                									<i class="fa fa-close"></i>
-												</a>
-											</td>
+											<td>
+    											<a href="edit-brand.php?id=<?php echo $result->id; ?>" class="edit-link">Edit</a>&nbsp;&nbsp;
+    											<a href="manage-brands.php?del=<?php echo $result->id; ?>" onclick="return confirm('Do you want to delete');">Delete</a>
+											</td> 
 										</tr>
 										<?php $cnt=$cnt+1; }} ?>
 										

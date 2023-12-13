@@ -41,10 +41,10 @@
 
   .dropdown-menu {
     position: absolute;
-    top: 100%;
-    left: 0%;
+    top: 80%%;
+    left: 20%;
     list-style: none;
-    padding: 20px;
+    padding: 15px;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }

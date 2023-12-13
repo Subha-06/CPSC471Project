@@ -59,9 +59,9 @@ $msg="Info Updateed successfully";
 </head>
 
 <body>
-	<?php include('includes/header.php');?>
+<?php include('includes/leftbar.php');?>
 	<div class="ts-main-content">
-	<?php include('includes/leftbar.php');?>
+	
 		<div class="content-wrapper">
 			<div class="container-fluid">
 
